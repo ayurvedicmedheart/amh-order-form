@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="hi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AMH Order Form</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>❤️ AYURVEDIC MEDICINE FOR HEART ❤️</h1>
+
+        <h2>ORDER FORM</h2>
+
+        <p>
+            <p>
+<hr>
+
+<h3>Customer Details</h3>
+<p>
+    कृपया सही जानकारी भरें ताकि आपका ऑर्डर जल्दी भेजा जा सके।
+</p>
+
+<div class="form-group">
+
+    <label for="fullName">
+        Full Name <span class="required">*</span>
+    </label>
+
+    <input
+        type="text"
+        id="fullName"
+        placeholder="Enter your full name"
+        required>
+
+
+
+<div class="form-group">
+
+    <label for="mobile">
+        Mobile Number <span class="required">*</span>
+    </label>
+
+    <input
+        type="tel"
+        id="mobile"
+        placeholder="Enter 10 digit mobile number"
+        maxlength="10"
+        required>
+
+</div>
+
+<div class="form-group">
+
+    <label for="altMobile">
+        Alternative Mobile Number
+    </label>
+
+    <input
+        type="tel"
+        id="altMobile"
+        placeholder="Enter alternative mobile number"
+        maxlength="10">
+
+</div>
+
+<div class="form-group">
+
+    <label for="address">
+        Full Address <span class="required">*</span>
+    </label>
+
+    <textarea
+        id="address"
+        rows="4"
+        placeholder="Enter your complete address"
+        required></textarea>
+
+</div>
+
+<div class="form-group">
+
+    <label for="pincode">
+        Pincode <span class="required">*</span>
+    </label>
+
+    <input
+        type="text"
+        id="pincode"
+        placeholder="Enter 6 digit pincode"
+        maxlength="6"
+        required>
+
+<hr>
+
+<h3>📦 Order Details</h3>
+
+<div class="form-group">
+
+    <label>Product</label>
+
+    <div class="product-box">
+
+        <div class="product-name">
+            ❤️ Ayurvedic Medicine For Heart
+        </div>
+
+        <div class="product-price">
+            ₹400 / Bottle
+        </div>
+
+    </div>
+
+</div>
+
+<div class="form-group">
+
+    <label for="qty">
+        Quantity (Bottles) <span class="required">*</span>
+    </label>
+
+    <input
+    type="number"
+    id="qty"
+    min="1"
+    required
+oninput="calculateTotal()"
+    inputmode="numeric"
+    onkeydown="return event.key !== 'ArrowUp' && event.key !== 'ArrowDown';">
+
+    <div class="qty-note">
+        1 Bottle = 15 Days
+    </div>
+
+</div>
+
+    
+
+<hr>
+
+<h3>💳 Select Payment Method</h3>
+
+<div class="form-group">
+
+    <label>
+
+        <input
+            type="radio"
+            name="payment"
+            value="Prepaid"
+            required>
+
+        Prepaid (Online Payment)
+
+    </label>
+
+</div>
+
+<div class="form-group">
+
+    <label>
+
+        <input
+            type="radio"
+            name="payment"
+            value="COD">
+
+        Cash on Delivery (COD)
+
+    </label>
+
+</div>
+
+<hr>
+
+<h3>💰 Order Summary</h3>
+
+<div class="summary-box">
+
+    <div class="summary-row">
+        <span>Product Price</span>
+        <span id="productPrice">₹0</span>
+    </div>
+
+    <div class="summary-row">
+        <span>Shipping Charge</span>
+        <span id="shippingCharge">₹0</span>
+    </div>
+
+    <div class="summary-row">
+        <span>COD Charge</span>
+        <span id="codCharge">₹0</span>
+    </div>
+
+
+    <div class="summary-total">
+        <span>Total Amount</span>
+        <span id="totalAmount">₹0</span>
+    </div>
+
+<hr>
+
+
+
+<div id="upiBox">
+
+    
+<h3>💳 UPI Payment</h3>
+
+    <div class="upi-box">
+
+        <img src="qr.png" alt="UPI QR Code" class="upi-qr">
+
+        <label>UPI ID</label>
+
+        <input
+            type="text"
+            id="upiId"
+            value="8218935646@pz"
+            readonly>
+<button type="button" class="copy-btn" onclick="copyUPI()">
+    📋 Copy UPI ID
+</button>
+
+<button type="button" class="download-btn" onclick="downloadQR()">
+    ⬇ Download QR Code
+</button>
+
+        
+
+    </div>
+
+</div>
+<hr>
+
+<button type="button" class="submit-btn" onclick="sendWhatsApp()">
+
+    🔘 WhatsApp पर ऑर्डर भेजें
+
+</button>
+
+<div id="orderSuccess" style="
+    display:none;
+    margin-top:15px;
+    padding:15px;
+    background:#e8f5e9;
+    border:1px solid #4caf50;
+    border-radius:10px;
+    text-align:center;
+    color:#1b5e20;
+    font-weight:bold;
+">
+    ✅ Order Request Sent Successfully!<br>
+    <span style="font-weight:normal;">
+        आपका Order WhatsApp पर भेज दिया गया है।
+    </span>
+</div>
+
+</div>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+        </p>
+
+    </div>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
