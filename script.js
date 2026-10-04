@@ -4,8 +4,8 @@
 
 // Product Charges
 const bottlePrice = 400;
-const shippingCharge = 60;
-const codCharge = 40;
+const shippingCharge = 100;
+const codCharge = 60;
 
 // Form Fields
 const qty = document.getElementById("qty");
