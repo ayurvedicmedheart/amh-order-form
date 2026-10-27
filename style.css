@@ -32,7 +32,8 @@ body{
 .form-logo img {
     display: block;
     width: 100%;
-    max-width: 300px;
+    max-width: 250px;
+width: 100%;
     max-height: 100px;
     height: auto;
     object-fit: contain;
