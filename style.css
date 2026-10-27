@@ -23,6 +23,21 @@ body{
     border-radius:10px;
 
     text-align:center;
+    .form-logo {
+    width: 100%;
+    text-align: center;
+    margin: 0 auto 15px;
+}
+
+.form-logo img {
+    display: block;
+    width: 100%;
+    max-width: 300px;
+    max-height: 100px;
+    height: auto;
+    object-fit: contain;
+    margin: 0 auto;
+}
 
     box-shadow:0 0 10px rgba(0,0,0,.15);
 
